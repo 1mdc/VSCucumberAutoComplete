@@ -125,7 +125,7 @@ export default class StepsHandler {
         // Step part getting
         const { stepRegExSymbol } = this.settings.cucumberautocomplete;
         //Step text could be placed between '/' symbols (ex. in JS) or between quotes, like in Java
-        const stepStart = stepRegExSymbol ? `(${stepRegExSymbol})` : `(\/|'|"|\`)`;
+        const stepStart = stepRegExSymbol ? `(${stepRegExSymbol})` : `(\/|'|"""|"|\`)`;
         //Our step could contain any symbols, except of our 'stepStart'. Use \3 to be sure in this
         const stepBody = stepRegExSymbol ? `([^${stepRegExSymbol}]+)` : '([^\\3]+)';
         //Step should be ended with same symbol it begins
